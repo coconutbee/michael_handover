@@ -1,1 +1,49 @@
-# michael_-handover
+# Part 1: Prepare base model for ArcFace
+## Step 1: data compression
+```bash
+python -m mxnet.tools.im2rec --list --recursive train <dataset_path> # list the images in the dataset
+
+python -m mxnet.tools.im2rec train.lst <dataset_path> # create the record file
+```
+- path of dataset: /media/avlab/8TB/Michael/arcface_torch_LR_50/gradeuate/dataset/images/RepSet_X_7 #on 1601191353
+* [ x ] Dataset compression completed, and .rec, .list, and .idx files have been obtained.
+
+## Step 2: set the config file
+- config.py: RepSet_X_7.py
+![arcface_config](arcface_config.png)
+## Step 3: train the base model
+```bash
+python train_v2.py configs/config/<config.py>
+```
+Validation while training. Also shows the validation accuracy, you can only force on 'Accuracy-Highest' value.
+
+- config.py: RepSet_X_7.py
+## Step 4: validation
+![arcface_val](arcface_val.png)
+```bash
+python verification_torch.py
+```
+# Part 2: AdaDistillation
+## Step 1: data compression
+```bash
+python -m mxnet.tools.im2rec --list --recursive train <dataset_path> # list the images in the dataset
+
+python -m mxnet.tools.im2rec train.lst <dataset_path> # create the record file
+```
+- path of dataset: /media/avlab/8TB/Michael/arcface_torch_LR_50/gradeuate/dataset/images/RepSet_X_7 #on 1601191353
+* [ x ] Dataset compression completed, and .rec, .list, and .idx files have been obtained.
+## Step 2: set the config file
+- config.py: RepSet_X_7.py
+![KD_config-1](KD_config-1.png)
+![KD_config-2](KD_config-2.png)
+## Step 3: train the AdaDistillation model
+```bash
+bash run_AdaDistill.sh # Backbone used for test value. Header used for train resume.
+```
+# Part 3: DMD(Dual Modal Diffusion)
+## Step 1: data location
+- CAF-Aug: /media/avlab/disco/Michael/CAF_dataset/Cross_Age_Face_crop_age_aug_label # on 1601191353
+- Vox2-LP: /media/avlab/disco/Michael/vox2/vox2_label
+
+#### label logic: <folder_name>_<num_img>_<yaw>_<age_mivolo>.jpg
+![labbel_logic](label_logic.png)
