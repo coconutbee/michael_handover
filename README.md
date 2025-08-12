@@ -129,3 +129,6 @@ python main.py --root ../unconditional_generation/unconditional_samples --save_r
 ## ID image path:
  - 526696407
 ![ID_table1](id_table1.png)
+ - 1414974416
+![ID_table2](id_table2.png)
+# Part 6: Intra-class Distribution
