@@ -85,3 +85,47 @@ python app.py
 ```
 ![Demo](dcface_demo.png)
 #### Details:
+
+# Part 4: SFG(Source Face Generator)
+## Step 1: LLM api call
+- Path: /media/avlab/8TB/Michael/Janus # on 1601191353
+```bash
+python janus_rag_estimator.py
+python gpt_rag_estimator.py
+```
+![janus_rag_estimator](janus_rag_estimator.png)
+![gpt_rag_estimator](gpt_rag_estimator.png)
+### Output:
+![Output](prompt_output.png)
+## Step 2: Add additional information
+```bash
+python add_country.py
+```
+![add_country](add_country.png)
+## Step 3: Generate canny edge image
+```bash
+python canny.py
+```
+![canny](canny.png)
+## Step 4: Generate source face
+```bash
+python sd3_infer.py --prompt=Prompt <txt path> --controlnet_cond_image=<mapped canny image path> --controlnet_ckpt=controlnet<weight path> --out_dir=<output path> 
+```
+##### Example:
+```bash
+python sd3_infer.py --prompt=/media/avlab/8TB/Michael/Janus/outputs_ffhq/predictions_random_country.txt --controlnet_cond_image=/media/avlab/8TB/Michael/sd3.5/ffhq_val_canny --controlnet_ckpt=models/sd3.5_large_controlnet_canny.safetensors --out_dir=outputs/sd3.5_large_canny
+```
+# Part 5: DCFace ID Generator
+## Step 1: Generate ID images
+ - Path: /media/avlab/8TB/Michael/dcface/dcface/stage1/unconditional_generation # 1601191353
+```bash
+python unconditional_sampling.py --attention_resolutions 16 --class_cond False --diffusion_steps 1000 --num_samples 16 --batch_size 8 --image_size 256 --learn_sigma True --noise_schedule linear --num_channels 128 --num_head_channels 64 --num_res_blocks 1 --resblock_updown True --use_fp16 False --use_scale_shift_norm True --timestep_respacing 100 --down_N 32 --range_t 20 --save_dir unconditional_samples
+```
+## Step 2: Align Faces
+ - Path: /media/avlab/8TB/Michael/dcface/dcface/stage1/align_faces
+```bash
+python main.py --root ../unconditional_generation/unconditional_samples --save_root ../unconditional_generation/unconditional_samples_aligned
+```
+## ID image path:
+ - 526696407
+![ID_table1](id_table1.png)
