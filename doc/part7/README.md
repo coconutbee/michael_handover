@@ -13,7 +13,7 @@ follow these steps:
 - Copying failure samples
 - Pairing failure samples
 - Verifying failure pairs with model
-### Pairing
+### Pairing samples
 - Path: /media/avlab/8TB/Michael/arcface_torch_LR_50/gradeuate/code # on 1601191353
 ![Pairing](pairing.png)
 ```bash
