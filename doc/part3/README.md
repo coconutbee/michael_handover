@@ -28,8 +28,8 @@ Datamodule path :/media/avlab/8TB/Michael/dcface/dcface/src/configs/datamodule/c
 bash synthesis.sh
 ```
 ![Inference](dcface_inference.png)
-ID_IMAGES_ROOT: ID images path (without subfolders, only ID)
-STYLE_IMAGES_ROOT: style images path(with subfolder, also ID corresponding with images) 
+ID_IMAGES_ROOT: ID images path (without subfolders, only ID) \
+STYLE_IMAGES_ROOT: style images path(with subfolder, also ID corresponding with images) \
 OUTPUT_ROOT: output path
 
 ## Supplementary
