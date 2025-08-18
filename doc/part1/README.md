@@ -30,3 +30,4 @@ python verification_torch.py
 ```bash
 python image_generation_with_reference.py --image_file "path/of/the/image/file or folder" --model_weights weights/vec2face_generator.pth --batch_size 5 --example 10 --name images-of-references
 ```
+- Best dataset: /media/avlab/8TB/Michael/arcface_torch_LR_50/gradeuate/dataset/images/reduce_size/RepSet_X_15_vec2face_pose #Augmentation with DMD & vec2face
