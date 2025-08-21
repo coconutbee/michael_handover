@@ -10,4 +10,4 @@ This repository is organized into three parts. Each part has detailed instructio
 6. [Part 6: Intra-class Distribution](doc/part6/README.md) – instructions for analyzing intra-class distribution.
 7. [Part 7: Find the Representative Samples](doc/part7/README.md) – steps for finding representative images from a dataset.
 8. [Part 8: DG&PASL](doc/part8/README.md) – instructions for training and evaluating the DG&PASL model.
-9. [Mnt](doc/mnt/)
+9. [Mnt](doc/mnt/README.md) - storage for model and dataset files.
