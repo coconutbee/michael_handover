@@ -1,14 +1,4 @@
-## Note:
-- RepSet_X_15的ID: /media/avlab/8TB/Michael/arcface_torch_LR_50/gradeuate/dataset/images/reduce_size/RepSet_X_15_id
-- 除了DMD之外，也可以用vec2face擴充，就是用上面的ID然後用vec2face的生成器生成: /media/avlab/8TB/Michael/Vec2Face
-## Vec2face - [github](https://github.com/HaiyuWu/Vec2Face)
-```bash
-python image_generation_with_reference.py --image_file "path/of/the/image/file or folder" --model_weights weights/vec2face_generator.pth --batch_size 5 --example 10 --name images-of-references
-```
-- Best dataset: /media/avlab/8TB/Michael/arcface_torch_LR_50/gradeuate/dataset/images/reduce_size/RepSet_X_15_vec2face_pose #Augmentation with DMD & vec2face
-![latest_performance](latest_performance.png)
-
-
+# Latest Research on Face Recognition
 ### Dataset Descriptions
 
 - **RepSet-X-S**  
@@ -35,7 +25,7 @@ python image_generation_with_reference.py --image_file "path/of/the/image/file o
 - **RepSet-X-S-V-P-D**  
   在 RepSet-X-S-V-P 上每個 ID 再加入 5 張 DCFace 擴增，全體效能提升故有效  
 
-### Dataset Results
+### Training from scratch
 
 | Datasets        | Subjects/Images | Method/Arch   | LFW   | CFP-FP | AgeDB | CPLFW | CALFW | Avg.  | Effective? |
 |-----------------|-----------------|---------------|-------|--------|-------|-------|-------|-------|------------|
@@ -48,6 +38,11 @@ python image_generation_with_reference.py --image_file "path/of/the/image/file o
 | RepSet-X-S-V-P-A| 10K / 0.37 M    | ArcFace/IR50 | 98.15 | 86.00  | 87.30 | 82.13 | 90.58 | 88.83 | X          |
 | RepSet-X-S-V-P-D| 10K / 0.39 M    | ArcFace/IR50 | 98.33 | 87.06  | 88.38 | 83.20 | 91.34 | 89.66 | V          |
 
+### Distilled from glint_cosface_r50
+
+| Datasets         | Subjects/Images | Method/Arch   | LFW   | CFP-FP | AgeDB | CPLFW | CALFW | Avg.  |
+|------------------|-----------------|---------------|-------|--------|-------|-------|-------|-------|
+| RepSet-X-S-V-P-D | 10K / 0.39 M    | ArcFace/IR50 | 99.06 | 91.42  | 92.55 | 93.18 | 88.03 | 92.85 |
 
 
 ### Dataset Paths
@@ -61,3 +56,14 @@ python image_generation_with_reference.py --image_file "path/of/the/image/file o
 | RepSet-X-S-V-P   | 10K / 0.34 M    | `/media/avlab/8TB/Michael/arcface_torch_LR_50/gradeuate/dataset/images/reduce_size/RepSet_X_15_vec2face_pose` |
 | RepSet-X-S-V-P-A | 10K / 0.37 M    | `/media/avlab/8TB/Michael/arcface_torch_LR_50/gradeuate/dataset/images/reduce_size/RepSet_X_15_vec2face_pose_age` |
 | RepSet-X-S-V-P-D | 10K / 0.39 M    | `/media/avlab/8TB/Michael/arcface_torch_LR_50/gradeuate/dataset/images/reduce_size/RepSet_X_15_vec2face_pose_dcface` |
+
+
+
+## Note:
+- RepSet_X_15的ID: /media/avlab/8TB/Michael/arcface_torch_LR_50/gradeuate/dataset/images/reduce_size/RepSet_X_15_id
+- 除了DMD之外，也可以用vec2face擴充，就是用上面的ID然後用vec2face的生成器生成: /media/avlab/8TB/Michael/Vec2Face
+## Vec2face - [github](https://github.com/HaiyuWu/Vec2Face)
+```bash
+python image_generation_with_reference.py --image_file "path/of/the/image/file or folder" --model_weights weights/vec2face_generator.pth --batch_size 5 --example 10 --name images-of-references
+```
+- Best dataset: /media/avlab/8TB/Michael/arcface_torch_LR_50/gradeuate/dataset/images/reduce_size/RepSet_X_15_vec2face_pose #Augmentation with DMD & vec2face
