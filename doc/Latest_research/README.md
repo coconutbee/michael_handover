@@ -29,6 +29,13 @@
 
 | Datasets | Subjects/Images | Method/Arch | LFW | CFP-FP | AgeDB | CPLFW | CALFW | Avg. | Effective? |
 |----------|-----------------|-------------|-----|--------|-------|-------|-------|------|------------|
+| **Baseline Datasets** |  |  |  |  |  |  |  |  |  |
+| MS1MV2 | 85K / 5.8M |  | 99.80 | 98.40 | 98.20 | 92.90 | 96.03 | 97.07 |  |
+| DCFace | 10K / 0.55M |  | 99.07 | 91.13 | 92.25 | 86.28 | 93.10 | 92.36 |  |
+| CemiFace | 10K / 0.55M |  | 99.18 | 90.96 | 93.12 | 87.57 | 93.55 | 92.88 |  |
+| Vec2Face | 10K / 0.50M |  | 99.10 | 88.71 | 91.43 | 85.93 | 92.72 | 91.58 |  |
+| UIFace | 10K / 0.50M |  | 99.23 | 92.20 | 92.50 | 88.08 | 93.17 | 93.04 |  |
+| **Our Experiments** |  |  |  |  |  |  |  |  |  |
 | RepSet-X-S | 10K / 0.21 M | ArcFace/IR50 | 97.68 | 85.50 | 86.83 | 81.20 | 89.68 | 88.18 |  |
 | +P | 10K / 0.24 M | ArcFace/IR50 | 97.50 | 86.16 | 86.38 | 80.82 | 89.42 | 88.06 | V |
 | +A | 10K / 0.24 M | ArcFace/IR50 | 97.48 | 86.31 | 86.00 | 80.90 | 90.03 | 88.14 | X |
@@ -53,6 +60,7 @@ ROOT = `/media/avlab/8TB/Michael/arcface_torch_LR_50/gradeuate/dataset/images/re
 | +P | 10K / 0.24 M | `ROOT/RepSet_X_15_pose` |
 | +A | 10K / 0.24 M | `ROOT/RepSet_X_15_age` |
 | +V | 10K / 0.31 M | `ROOT/RepSet_X_15_vec2face` |
+| +V、C | 10K / 0.36 M | `ROOT/RepSet_X_15_vec2face_c` |
 | +V、P | 10K / 0.34 M | `ROOT/RepSet_X_15_vec2face_pose` |
 | +V、P、A | 10K / 0.37 M | `ROOT/RepSet_X_15_vec2face_pose_age` |
 | +V、P、D | 10K / 0.39 M | `ROOT/RepSet_X_15_vec2face_pose_dcface` |
