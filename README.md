@@ -11,4 +11,5 @@ This repository is organized into three parts. Each part has detailed instructio
 7. [Part 7: Find the Representative Samples](doc/Find_the_Representative_Samples/README.md) – steps for finding representative images from a dataset.
 8. [Part 8: DG&PASL](doc/DG&PASL/README.md) – instructions for training and evaluating the DG&PASL model.
 9. [Part 9: Data Augmentation](doc/Data_Augmentation/README.md) – instructions for augmenting the dataset.
-10. [Mnt](doc/mnt/README.md) - storage for model and dataset files.
+10. [Latest Research](doc/Latest_research/README.md) – enhance face recognition techniques by data augmentation.
+11. [Mnt](doc/mnt/README.md) - storage for model and dataset files.
