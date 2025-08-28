@@ -45,7 +45,7 @@
 | +V、P | 10K / 0.34 M | ArcFace/IR50 | 98.17 | 87.03 | 87.58 | 82.37 | 90.98 | 89.23 | V |
 | +V、P、A | 10K / 0.37 M | ArcFace/IR50 | 98.15 | 86.00 | 87.30 | 82.13 | 90.58 | 88.83 | X |
 | +V、P、D | 10K / 0.39 M | ArcFace/IR50 | 98.33 | 87.06 | 88.38 | 83.20 | 91.34 | 89.66 | V |
-| +V、P、D、C | 10K / 0.44 M | ArcFace/IR50 | 98.33 | 87.06 | 88.38 | 83.20 | 91.34 | 89.66 | V |
+| +V、P、D、C | 10K / 0.44 M | ArcFace/IR50 | 98.20 | 86.79 | 88.43 | 82.70 | 91.18 | 89.46 | X |
 ### Distilled from glint_cosface_r50
 
 | Datasets         | Subjects/Images | Method/Arch   | LFW   | CFP-FP | AgeDB | CPLFW | CALFW | Avg.  |
