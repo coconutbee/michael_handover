@@ -65,6 +65,7 @@ ROOT = `/media/avlab/8TB/Michael/arcface_torch_LR_50/gradeuate/dataset/images/re
 | +V、P | 10K / 0.34 M | `ROOT/RepSet_X_15_vec2face_pose` |
 | +V、P、A | 10K / 0.37 M | `ROOT/RepSet_X_15_vec2face_pose_age` |
 | +V、P、D | 10K / 0.39 M | `ROOT/RepSet_X_15_vec2face_pose_dcface` |
+| +V、P、D、C | 10K / 0.44 M | `ROOT/RepSet_X_15_vec2face_pose_dcface` |
 
 
 
