@@ -45,7 +45,7 @@
 | +V、P | 10K / 0.34 M | ArcFace/IR50 | 98.17 | 87.03 | 87.58 | 82.37 | 90.98 | 89.23 | V |
 | +V、P、A | 10K / 0.37 M | ArcFace/IR50 | 98.15 | 86.00 | 87.30 | 82.13 | 90.58 | 88.83 | X |
 | +V、P、D | 10K / 0.39 M | ArcFace/IR50 | 98.33 | 87.06 | 88.38 | 83.20 | 91.34 | 89.66 | V |
-| +V、P、D、C | 10K / 0.44 M | ArcFace/IR50 | 98.20 | 86.79 | 88.43 | 82.70 | 91.18 | 89.46 | X |
+| +V、P、D、C | 10K / 0.44 M | ArcFace/IR50 | 98.33 | 87.06 | 88.38 | 83.20 | 91.34 | 89.66 | V |
 ### Distilled from glint_cosface_r50
 
 | Datasets         | Subjects/Images | Method/Arch   | LFW   | CFP-FP | AgeDB | CPLFW | CALFW | Avg.  |
@@ -65,9 +65,22 @@ ROOT = `/media/avlab/8TB/Michael/arcface_torch_LR_50/gradeuate/dataset/images/re
 | +V、P | 10K / 0.34 M | `ROOT/RepSet_X_15_vec2face_pose` |
 | +V、P、A | 10K / 0.37 M | `ROOT/RepSet_X_15_vec2face_pose_age` |
 | +V、P、D | 10K / 0.39 M | `ROOT/RepSet_X_15_vec2face_pose_dcface` |
-| +V、P、D、C | 10K / 0.44 M | `ROOT/RepSet_X_15_vec2face_pose_dcface` |
 
+## Previous Research
+統整過往研究release的Training dataset, code與合成資料
+- DCFace [CVPR 2023]: [paper](https://openaccess.thecvf.com/content/CVPR2023/papers/Kim_DCFace_Synthetic_Face_Generation_With_Dual_Condition_Diffusion_Model_CVPR_2023_paper.pdf)
+- CemiFace [NeurIPS 2024]: [paper](https://proceedings.neurips.cc/paper_files/paper/2024/file/3ec6c6fc9065aa57785eb05dffe7c3db-Paper-Conference.pdf)
+- Vec2Face [ICLR 2025]: [paper](https://arxiv.org/pdf/2409.02979)
+- UIFace [ICLR 2025]: [paper](https://arxiv.org/pdf/2502.19803)
 
+#### UIFace also release a testing code for evaluating the quality of synthetic data [link](https://github.com/Tencent/TFace/blob/master/recognition/test/README.md).
+
+| Method | training data | training code | synthetic data | Reproducible |
+|--------|---------------|---------------|----------------|--------------|
+| [DCFcace](https://github.com/mk-minchul/dcface?tab=readme-ov-file) | [&#10004;][Various dataset](https://github.com/deepinsight/insightface/tree/master/recognition/_datasets_) | [&#10004;][link](https://github.com/mk-minchul/dcface?tab=readme-ov-file) | [&#10004;][link](https://drive.google.com/drive/folders/1bbG2P3pz81ujj-Ss1mOLol3qnQhc4nBJ) | [&#10004;] |
+| [CemiFace](https://github.com/szlbiubiubiu/CemiFace) | [&#10004;][CASIAWebFace](https://drive.google.com/file/d/1KxNCrXzln0lal3N4JiYl9cFOIhT78y1l/view)、[VggFace2](https://www.kaggle.com/datasets/hearfool/vggface2) | [&#10006;] | [&#10004;][link](https://onedrive.live.com/?redeem=aHR0cHM6Ly8xZHJ2Lm1zL3UvYy83YmQ1ODQ5MWM1NGU0MzUxL0VlN3Y5X09Qck5kTmlwb183U2hvMVhvQjc0T2dPUGVlSi1PUnpYTVM4YVcyYmc%5FZT12ajdyTDA&cid=7BD58491C54E4351&id=7BD58491C54E4351%21sf3f7efeeac8f4dd78a9a3fed2868d57a&parId=7BD58491C54E4351%21s5d42798c6ca94d20b6fd213146f7793e&o=OneUp) | [&#10006;] |
+| [Vec2Face](https://github.com/HaiyuWu/Vec2Face) | [&#10004;][WebFace4M](https://huggingface.co/datasets/gaunernst/webface4m-wds-gz) | [&#10004;][link](https://github.com/HaiyuWu/Vec2Face?tab=readme-ov-file) | [&#10004;][link](https://github.com/HaiyuWu/Vec2Face?tab=readme-ov-file) | [&#10004;] |
+| [UIFace](https://github.com/Tencent/TFace/tree/master/generation/uiface) | [&#10004;][CASIAWebFace](https://drive.google.com/file/d/1KxNCrXzln0lal3N4JiYl9cFOIhT78y1l/view) | [&#10004;][link](https://github.com/Tencent/TFace/tree/master/generation/uiface) | [&#10004;][link](https://drive.google.com/drive/folders/1rYk9b0jv1eX4H2X1F8JmX4Zt5c3KX1mN) | [&#10004;] |
 
 ## Note:
 - RepSet_X_15的ID: `ROOT/RepSet_X_15_id`
